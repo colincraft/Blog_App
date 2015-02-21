@@ -1,0 +1,17 @@
+<h1>Authors</h1>
+<!-- Loop through Author info -->
+<% @authors.each do |author| %>
+<p>
+<%= author.first_name %> <%= author.last_name %>
+</p>
+<p>
+<%= link_to "More info on #{author.first_name}", author_path(author) %>
+
+
+<%= link_to "Edit #{author.first_name}", edit_author_path(author) %>
+</p>
+<% end %>
+<!-- Add a new author link -->
+<p>
+<%= link_to "Add another Author", new_author_path %>
+</p>

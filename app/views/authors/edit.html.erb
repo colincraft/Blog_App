@@ -1,0 +1,23 @@
+<%= form_for @author do |f| %>
+<p>
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+</p>
+<p>
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+</p>
+<p>
+<%= f.label :age %>
+<%= f.text_field :age %>
+</p>
+<%= f.submit %>
+<% end %>
+
+<p>
+<%= link_to "Delete this writer?", author_path, method:"Delete", data:{ confirm: "Are you sure you want to delete #{@author.first_name}?"} %>
+</p>
+<!-- Home Button -->
+<p>
+<%= link_to "Home", authors_path %>
+</p>
