@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find params [:id]
+    @post = Post.find params[:id]
     @author = @post.author
   end
 
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     @post.update_attributes post_params
     @author = @post.author
     if @post.save
-      redirect_to post_past(@post)
+      redirect_to post_path(@post)
     else
       render :edit
     end

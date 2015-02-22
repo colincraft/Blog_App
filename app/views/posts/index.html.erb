@@ -1,2 +1,13 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<h2><%= @author.first_name %>'s blog posts</h2>
+<% @author.posts.each do |post| %>
+<h3><%= post.title %></h3>
+<h4><%= post.category %></h4>
+<p><%= post.body %></p>
+
+<%= link_to "Show this posting", post%>
+<% end %>
+
+<p>
+<%= link_to "Add a new post", new_author_post_path(@author) %>
+</p>
+<p><%= link_to "Home", authors_path %></p>

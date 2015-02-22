@@ -3,4 +3,5 @@
 <p><%= @author.last_name %></p>
 <p><%= @author.age %></p>
 <p><%= link_to "Edit #{@author.first_name}", edit_author_path(@author) %></p>
+<p><%= link_to "Show #{@author.first_name}'s posts", author_posts_path(@author) %></p>
 <p><%= link_to "Home", authors_path %></p>
