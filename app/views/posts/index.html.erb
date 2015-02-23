@@ -1,8 +1,6 @@
 <h2><%= @author.first_name %>'s blog posts</h2>
 <% @author.posts.each do |post| %>
 <h3><%= post.title %></h3>
-<h4><%= post.category %></h4>
-<p><%= post.body %></p>
 
 <%= link_to "Show this posting", post%>
 <% end %>
